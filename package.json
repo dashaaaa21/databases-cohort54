@@ -1,0 +1,23 @@
+{
+  "name": "databases-cohort54",
+  "version": "1.0.0",
+  "description": "> If you are following the HackYourFuture curriculum we recommend you to start with module > 1: [CLI/GIT](https://github.com/HackYourFuture/CLI-Git). To get a complete overview of the HackYourFuture > curriculum first, click [here](https://github.com/HackYourFuture/curriculum).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashaaaa21/databases-cohort54.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dashaaaa21/databases-cohort54/issues"
+  },
+  "homepage": "https://github.com/dashaaaa21/databases-cohort54#readme",
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}
