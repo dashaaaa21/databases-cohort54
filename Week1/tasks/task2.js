@@ -80,7 +80,7 @@ const queries = [
         `
     },
     {
-        question: "What's the top 10 most populated cities?",
+        question: "What's the top 10 most populated cities??",
         query: `
             SELECT name, population 
             FROM city 
