@@ -56,11 +56,10 @@ const queries = [
     {
         question: "What are the names of all the cities in the Netherlands?",
         query: `
-            SELECT c.name, c.population 
-            FROM city c 
-            JOIN country co ON c.countrycode = co.code 
-            WHERE co.name = 'Netherlands' 
-            ORDER BY c.name
+            SELECT name, population
+            FROM city
+            WHERE countrycode = 'NLD'
+            ORDER BY name
         `
     },
     {
