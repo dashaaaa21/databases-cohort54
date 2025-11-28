@@ -69,62 +69,20 @@ async function setup() {
         `);
 
         await meetupClient.query(`
-            INSERT INTO Invitee (invitee_name)
+            INSERT INTO Invitee (invitee_name, invited_by)
             VALUES
-                ('Dasha'), 
-                ('Nastya'), 
-                ('Ola'), 
-                ('Vlad'),
-                ('Sasha'), 
-                ('Katya'), 
-                ('Vadim'), 
-                ('Dima'),
-                ('Igor'), 
-                ('Anya');
+                ('Nastya', NULL),
+                ('Dasha', 1),
+                ('Vlad', NULL),
+                ('Ola', 3),
+                ('Katya', NULL),
+                ('Sasha', 5),
+                ('Dima', NULL),
+                ('Vadim', 7),
+                ('Anya', NULL),
+                ('Igor', 9);
         `);
 
-        await meetupClient.query(`
-            UPDATE Invitee
-            SET invited_by = (
-                SELECT invitee_no
-                FROM Invitee
-                WHERE invitee_name = 'Nastya'
-            )
-            WHERE invitee_name = 'Dasha';
-
-            UPDATE Invitee
-            SET invited_by = (
-                SELECT invitee_no
-                FROM Invitee
-                WHERE invitee_name = 'Vlad'
-            )
-            WHERE invitee_name = 'Ola';
-
-            UPDATE Invitee
-            SET invited_by = (
-                SELECT invitee_no
-                FROM Invitee
-                WHERE invitee_name = 'Katya'
-            )
-            WHERE invitee_name = 'Sasha';
-
-            UPDATE Invitee
-            SET invited_by = (
-                SELECT invitee_no
-                FROM Invitee
-                WHERE invitee_name = 'Dima'
-            )
-            WHERE invitee_name = 'Vadim';
-
-            UPDATE Invitee
-            SET invited_by = (
-                SELECT invitee_no
-                FROM Invitee
-                WHERE invitee_name = 'Anya'
-            )
-            WHERE invitee_name = 'Igor';
-
-        `);
 
         await meetupClient.query(`
             INSERT INTO Room (room_name, floor_number)
