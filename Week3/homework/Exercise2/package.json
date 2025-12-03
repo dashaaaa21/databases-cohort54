@@ -1,9 +1,9 @@
 {
-  "name": "assigments",
+  "name": "exercise2",
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "database.js",
+  "main": "transaction.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongodb": "4.1",
     "pg": "^8.16.3"
   }
 }
