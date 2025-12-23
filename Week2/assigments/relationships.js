@@ -1,4 +1,4 @@
-import {client} from './database.js';
+import { client } from './database.js';
 
 async function setupDatabase() {
     try {
